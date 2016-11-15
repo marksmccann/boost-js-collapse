@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="A demo of Boost JS Collapse">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Boost JS Collapse Demo</title>
+        <link rel="stylesheet" href="demo.css">
+    </head>
+    <body>
+        <div id="collapse" data-init="collapse">
+            <a href="#drawer1" data-bind="#collapse" data-role="handle" class="handle is-open">Handle 1</a>
+            <div id="drawer1" data-bind="#collapse" data-role="drawer" class="drawer is-open">Drawer 1</div>
+            <a href="#drawer2" data-bind="#collapse" data-role="handle" class="handle">Handle 2</a>
+            <div id="drawer2" data-bind="#collapse" data-role="drawer" class="drawer">Drawer 2</div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="https://cdn.rawgit.com/marksmccann/boost-js/master/dist/boost.min.js"></script>
+        <script src="../dist/collapse.min.js"></script>
+        <script>
+            var boost = $.fn.boost;
+            var collapse = $.fn.boost.collapse;
+            $.fn.collapse = boost( collapse.plugin, collapse.defaults );
+            boost.auto();
+        </script>
+    </body>
+</html>

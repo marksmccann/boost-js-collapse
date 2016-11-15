@@ -1,0 +1,10 @@
+.drawer,
+.handle {
+    display: block;
+}
+.drawer {
+    display: none;
+}
+.drawer.is-open {
+    display: inherit;
+}
