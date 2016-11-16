@@ -12,6 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/marksmccann/boost-js-collapse.git"
   },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "collapse"
+  ],
   "author": "“Mark <“mail@markmccann.me”>",
   "license": "MIT",
   "bugs": {
@@ -28,7 +33,7 @@
     "mocha-jsdom": "^1.1.0"
   },
   "dependencies": {
-    "boost-js": "^0.3.1",
+    "boost-js": "^0.3.2",
     "jquery": "^3.1.1"
   }
 }
