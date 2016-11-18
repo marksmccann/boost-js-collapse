@@ -25,7 +25,7 @@
         // add role="tablist" to source element
         inst.source.attr('role','tablist');
         // if more than one can be open at once, add aria-multiselectable
-        if(inst.settings.accordian) {
+        if(!inst.settings.accordian) {
             inst.source.attr('aria-multiselectable', 'true');
         }
         // add role="tab" and aria-controls="[targetID]" to each handle
@@ -37,9 +37,9 @@
         // add aria-labelledby="[handleID]" to each drawer
         // if handle does not have an id, create a new one and add it to handle
         for( var k in inst.pairsByDrawer ) {
-            var handle = inst.pairsByDrawer[k][0], panel = inst.pairsByDrawer[k][1];
-            var id = handle.id.length === 0 ? panel.id+'-handle' : handle.id;
-            $(panel).attr('role','tabpanel').attr('aria-labelledby',id);
+            var handle = inst.pairsByDrawer[k][0], drawer = inst.pairsByDrawer[k][1];
+            var id = handle.id.length === 0 ? drawer.id+'-handle' : handle.id;
+            $(drawer).attr('role','tabpanel').attr('aria-labelledby',id);
             $(handle).attr('id', id);
         }
         // locate any currently active handle and store it's target id
@@ -64,7 +64,7 @@
 
     Collapse.prototype = {
         /**
-         * changes the active state of a handle and its corresponding 
+         * changes the active state of a handle and its corresponding
          * drawer to open with the id of the panel wanted to be changed to
          * @param {string} id the id of the drawer
          * @param {function} callback
@@ -97,7 +97,7 @@
             return inst;
         },
         /**
-         * changes the active state of a handle and its corresponding 
+         * changes the active state of a handle and its corresponding
          * drawer to closed with the id of the panel wanted to be changed to
          * @param {string} id the id of the drawer
          * @param {function} callback
@@ -130,8 +130,8 @@
          * @return {object} instance
          */
         toggleDrawer: function( id, callback ) {
-            return this.drawerIsOpen(id) 
-                ? this.closeDrawer( id, callback ) 
+            return this.drawerIsOpen(id)
+                ? this.closeDrawer( id, callback )
                 : this.openDrawer( id, callback );
         },
         /**
