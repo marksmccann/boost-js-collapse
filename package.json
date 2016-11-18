@@ -2,7 +2,7 @@
   "name": "boost-js-collapse",
   "title": "Boost JS Collapse",
   "version": "0.0.1",
-  "description": "A style-free collapse plugin for jQuery and Boost JS",
+  "description": "A style-free and accessible collapse plugin for jQuery and Boost JS",
   "main": "src/collapse.js",
   "scripts": {
     "start": "gulp",

@@ -1,6 +1,6 @@
-Boost JS Collapse
+Boost JS Collapse [![Build Status](https://travis-ci.org/marksmccann/boost-js-collapse.svg?branch=master)](https://travis-ci.org/marksmccann/boost-js-collapse)
 ==================================================
-A style-free collapse plugin for jQuery and [Boost JS](https://github.com/marksmccann/boost-js). While other plugins style and arrange your handles and drawers for you, this plugin only handles the functionality, leaving the layout and styling up to you.
+A style-free and accessible collapse plugin for jQuery and [Boost JS](https://github.com/marksmccann/boost-js). While other plugins style everything for you, this plugin only handles the functionality, leaving the layout and styling up to you.
 
 
 Installation
@@ -11,7 +11,7 @@ npm install boost-js-collapse
 ```
 Install in browser:
 ```html
-<script src="https://cdn.rawgit.com/marksmccann/boost-js-collapse/master/dist/collapse.min.js"></script>
+<script src="https://cdn.rawgit.com/marksmccann/boost-js-collapse/v0.0.1/dist/collapse.min.js"></script>
 ```
 
 Usage
